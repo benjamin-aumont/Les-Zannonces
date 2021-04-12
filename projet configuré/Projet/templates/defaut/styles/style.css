@@ -1,0 +1,243 @@
+﻿/* Définition des polices personnalisées */
+
+@font-face {
+	font-family: 'BallparkWeiner';
+	src: url('../polices/ballpark.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Dayrom';
+	src: url('../polices/dayrom.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Eléments principaux de la page */
+
+body {
+	background-color: #fff7d8;
+	font-family: 'Trebuchet MS', Arial, sans-serif;
+	color: #181818;
+}
+
+#bloc_page {
+	width: 950px;
+	margin: auto;
+}
+
+h1, nav{
+	font-family: Dayrom, serif;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+/* Header */
+
+header {
+	background: url('../images/separateur.png') repeat-x 0 62px;
+	position: relative;
+}
+
+	#titre_principal {
+		display: inline-block;
+		font-family: 'BallparkWeiner', serif;
+		font-size: 2.5em;
+		font-weight: normal;
+		margin-bottom: 0px;
+		background: url('../images/z.png') no-repeat left center;
+		line-height:60px;
+		padding-left:80px;
+	}
+
+	/* Navigation */
+	nav {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	nav ul {
+		list-style-type: none;
+	}
+	nav li {
+		display: inline-block;
+		margin-right: 15px;
+	}
+	nav a {
+		font-size: 1.3em;
+		color: #181818;
+		padding-bottom: 3px;
+		text-decoration: none;
+	}
+	nav a:hover {
+		color: #760001;
+		border-bottom: 3px solid #760001;
+	}
+
+	/* Bannière */
+	#banniere_image {
+		margin: 15px 0 25px 0;
+		height: 200px;
+		border-radius: 5px;
+		background: url('../images/header.jpg') no-repeat;
+		position: relative;
+		box-shadow: 0px 4px 4px #1c1a19;
+	}
+
+		#banniere_description {
+			text-indent: 15px;
+			position: absolute;
+			bottom: 0;
+			border-radius: 0px 0px 5px 5px;
+			width: 100%;
+			line-height: 47px;
+			background-color: rgba(24,24,24,0.8);
+			color: white;
+			font-size: 0.8em;
+		}
+
+		.bouton_rouge {
+			text-indent: 0;
+			display: inline-block;
+			line-height: 27px;
+			position: absolute;
+			right: 10px;
+			top: 10px;
+			border: 1px solid #d3ad0c;
+			border-radius: 5px;
+			font-size: 1.2em;
+			text-align: center;
+			padding: 0 5px;
+			color: white;
+			text-decoration: none;
+			background-image: linear-gradient(to bottom, #b6933f, #fcb936);
+		}
+			.bouton_rouge::after {
+				content: " ";
+				background: transparent url("../images/flecheblanchedroite.png") no-repeat scroll right center;
+				display: inline-block;
+				height: 10px ;
+				width: 13px;
+			}
+
+/* Corps */
+main {
+	width: 700px;
+	display: inline-block;
+}
+article, aside {
+	text-align: justify;
+}
+
+article h1 {
+	background: url('../images/ico_epingle.png') no-repeat ;
+	line-height: 47px;
+	padding-left: 53px;
+}
+
+article p {
+	font-size: 0.8em;
+}
+
+#categories {
+	font-size: 12px;
+	color: #3c69c0;
+}
+#categories > li {
+	margin-bottom: 10px;
+}
+#categories ul {
+	padding-left: 20px;
+}
+#categories li li {
+	display: inline;
+}
+#categories li li::after {
+	content: ", " ;
+}
+#categories li li:last-child::after {
+	content: "." ;
+}
+
+aside {
+	float: right;
+	position: relative;
+	width: 200px;
+	background-color: #706b63;
+	box-shadow: 0px 2px 5px #1c1a19;
+	border-radius: 5px;
+	padding: 10px;
+	color: white;
+	font-size: 0.9em;
+}
+
+	aside::before {
+		content: " ";
+		display: inline-block;
+		width: 0px;
+		height: 0px;
+		position: absolute;
+		left: -21px;
+		top:100px;
+		border: 9px solid transparent;
+		border-right: 12px solid #706b63;
+	}
+
+	#france {
+		text-align: center;
+	}
+
+	#france img {
+		border: 1px solid #181818;
+		background: white;
+	}
+
+	aside p:last-child {
+		display: flex;
+		justify-content: space-between;
+	}
+
+/* Footer */
+
+footer {
+	background:  url('../images/ico_top.png') no-repeat top center, url('../images/separateur.png') repeat-x top;
+	padding-top: 25px;
+	margin-top: 20px;
+	display: flex;
+	justify-content: space-between;
+	white-space: nowrap;
+}
+
+	footer p, footer ul {
+		font-size: 0.8em;
+	}
+
+	footer h1 {
+		font-size: 1.1em;
+	}
+
+	#footer_photos {
+		margin: 0 70px;
+	}
+	#footer_photos img {
+		border: 1px solid #181818;
+		margin-right: 2px;
+	}
+
+	#footer_categories ul {
+		vertical-align: top;
+		margin: 0;
+		padding: 0;
+		list-style-image: url('../images/ico_liensexterne.png');
+		list-style-position: inside;
+	}
+	#footer_categories ul li {
+		float: left;
+		width: 50%;
+	}
+
+	#footer_categories a {
+		text-decoration: none;
+		color: #760001;
+	}
